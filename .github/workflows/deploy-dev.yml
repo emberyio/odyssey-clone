@@ -1,0 +1,24 @@
+name: Deploy Development
+on:
+  push:
+    branches: dev
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+    branches: dev
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Deploy to Vercel Action
+        uses: BetaHuhn/deploy-to-vercel-action@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: TNd54eKS2vrugPqdnLUQkL2s
+          VERCEL_PROJECT_ID: prj_POfdSgWqSamIlababPc6NRLd1alt
+          PRODUCTION: false
+          ALIAS_DOMAINS: |
+            neo3d.vercel.app

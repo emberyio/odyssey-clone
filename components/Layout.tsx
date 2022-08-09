@@ -1,18 +1,22 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { motion, useAnimationControls } from "framer-motion";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import React, { useEffect } from "react";
 import { Autoplay, EffectCreative } from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-theme-dark">
+    <div className="flex flex-col min-h-screen lg:flex-row bg-theme-dark">
       <div className="lg:w-1/2 relative min-h-[50vh]">
-        <Nav />
-        <ImageSlider />
-        <Overlay />
+        <div className="fixed top-0 left-0 w-full h-full">
+          <Nav />
+          <ImageSlider />
+          <Overlay />
+        </div>
       </div>
-      <div className="lg:w-1/2 relative">
+      <div className="relative lg:w-1/2">
         {children}
         <Overlay />
       </div>
@@ -22,30 +26,52 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 function Nav() {
   return (
-    <div className="p-10 relative z-20">
-      <div className="text-theme-paragraphs uppercase font-bold text-4xl">
-        odyssey
-      </div>
-      <ul className="mt-5 font-semibold text-theme-paragraphs space-y-5">
-        <li className="group hover:text-theme-accent duration-300 cursor-pointer">
-          <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-          Menu
+    <div className="relative z-20 p-10 w-96">
+      <Link href="/">
+        <a className="text-4xl font-bold uppercase text-theme-paragraphs">
+          odyssey
+        </a>
+      </Link>
+      <ul className="mt-5 space-y-5 font-semibold text-theme-paragraphs">
+        <li className="duration-300 cursor-pointer group hover:text-theme-accent">
+          <Link href="menu">
+            <a>
+              <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+              Menu
+            </a>
+          </Link>
         </li>
-        <li className="group hover:text-theme-accent duration-300 cursor-pointer">
-          <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-          Book a Table
+        <li className="duration-300 cursor-pointer group hover:text-theme-accent">
+          <Link href="book-a-table">
+            <a>
+              <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+              Book a Table
+            </a>
+          </Link>
         </li>
-        <li className="group hover:text-theme-accent duration-300 cursor-pointer">
-          <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-          Contact
+        <li className="duration-300 cursor-pointer group hover:text-theme-accent">
+          <Link href="contact">
+            <a>
+              <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+              Contact
+            </a>
+          </Link>
         </li>
-        <li className="group hover:text-theme-accent duration-300 cursor-pointer">
-          <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-          Blog
+        <li className="duration-300 cursor-pointer group hover:text-theme-accent">
+          <Link href="blog">
+            <a>
+              <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+              Blog
+            </a>
+          </Link>
         </li>
-        <li className="group hover:text-theme-accent duration-300 cursor-pointer">
-          <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-          About
+        <li className="duration-300 cursor-pointer group hover:text-theme-accent">
+          <Link href="about">
+            <a>
+              <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+              About
+            </a>
+          </Link>
         </li>
       </ul>
     </div>
@@ -54,13 +80,13 @@ function Nav() {
 
 function ImageSlider() {
   return (
-    <div className="absolute z-0 w-full h-full top-0 left-0">
+    <div className="absolute top-0 left-0 z-0 w-full h-full">
       <div
         style={{
           backgroundImage:
             "linear-gradient(150deg, rgba(0, 0, 0, 0.9), transparent 55%)",
         }}
-        className="z-10 w-full h-full absolute top-0 left-0"
+        className="absolute top-0 left-0 z-10 w-full h-full"
       ></div>
       <Swiper
         loop
@@ -88,8 +114,8 @@ function ImageSlider() {
           <SwiperSlide key={i}>
             <div className="w-full h-full">
               <img
-                src={`http://unsplash.it/1000?random&gravity=center&${i}`}
-                className="w-full h-full object-cover select-none"
+                src={`https://source.unsplash.com/random/?food&gravity=center&${i}`}
+                className="object-cover w-full h-full select-none"
                 alt=""
               />
             </div>
@@ -101,35 +127,40 @@ function ImageSlider() {
 }
 
 function Overlay() {
+  const control1 = useAnimationControls();
+  const control2 = useAnimationControls();
+  const router = useRouter();
+  useEffect(() => {
+    control1.set({
+      width: "100%",
+      height: "100%",
+    });
+    control1.start({
+      width: "0%",
+    });
+    control2.start({
+      width: [0, 300, 0],
+    });
+  }, [control1, control2, router]);
+
   return (
     <motion.div
-      initial={{
-        width: "100%",
-        height: "100%",
-      }}
-      animate={{
-        width: "0%",
-      }}
+      animate={control1}
       transition={{
         duration: 1,
         delay: 0.5,
         ease: "easeInOut",
       }}
-      className="z-50 bg-theme-dark absolute top-0 left-0 flex justify-end"
+      className="absolute top-0 left-0 z-50 flex justify-end bg-theme-dark"
     >
       <motion.div
-        initial={{
-          width: 0,
-        }}
-        animate={{
-          width: [0, 300, 0],
-        }}
+        animate={control2}
         transition={{
           duration: 1,
           delay: 0.5,
           ease: "easeInOut",
         }}
-        className="bg-theme-accent h-full"
+        className="h-full bg-theme-accent"
       ></motion.div>
     </motion.div>
   );

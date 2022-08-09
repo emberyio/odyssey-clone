@@ -8,38 +8,38 @@ const Home: NextPage = () => {
         backgroundSize: "cover, auto",
         backgroundRepeat: "no-repeat, repeat",
         backgroundImage:
-          " url(https://assets.website-files.com/62884cf082360f3370127ed7/6288b3dd226efd671983ff03_illustration.svg), linear-gradient(180deg, #102326, #102326);",
+          " url(https://assets.website-files.com/62884cf082360f3370127ed7/6288b3dd226efd671983ff03_illustration.svg), linear-gradient(180deg, #102326, #102326)",
       }}
       className="w-full h-full"
     >
-      <div className="p-10 flex gap-20 flex-col h-full justify-between">
+      <div className="flex flex-col justify-between h-full gap-20 p-10">
         <div>
           <h1 className="heading text-theme-paragraphs text-[10vw] leading-[98%]">
             <span className="text-theme-accent">RESTAURANT</span> OF EUROPEAN
             CUISINE
           </h1>
-          <p className="text-slate-400 max-w-lg my-10 text-xl">
+          <p className="max-w-lg my-10 text-xl text-slate-400">
             We use only the finest local ingredients available and offer
             seasonal specials throughout the year.
           </p>
-          <button className="bg-theme-accent px-8 hover:bg-white duration-300 py-4 rounded-full font-semibold">
+          <button className="px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
             BOOK A TABLE
           </button>
         </div>
         <div className="flex justify-between">
           <div>
-            <div className="text-theme-accent text-sm font-mono tracking-wide">
+            <div className="font-mono text-sm tracking-wide text-theme-accent">
               CALL US
             </div>
-            <div className="text-theme-paragraphs text-xl font-semibold">
+            <div className="text-xl font-semibold text-theme-paragraphs">
               1 800-123-4567
             </div>
           </div>
           <div>
-            <div className="text-theme-accent text-right text-sm font-mono tracking-wide">
+            <div className="font-mono text-sm tracking-wide text-right text-theme-accent">
               LOCATION
             </div>
-            <div className="text-theme-paragraphs text-xl font-semibold">
+            <div className="text-xl font-semibold text-theme-paragraphs">
               5678 Seltice Way Coeur D Alene
             </div>
           </div>

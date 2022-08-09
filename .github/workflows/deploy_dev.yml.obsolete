@@ -1,0 +1,36 @@
+name: deploy_dev
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: dev
+
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+
+      - uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 6.0.2
+          run_install: true
+      - uses: amondnet/vercel-action@v25
+        id: vercel-action-dev
+        with:
+          github-token: ${{ secrets.GH_TOKEN }}
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: TNd54eKS2vrugPqdnLUQkL2s
+          vercel-project-id: prj_vnLgmuY5Ji79DDVzNAdn6He5E1OG
+          working-directory: ./
+          alias-domains: |
+            neo3d.vercel.app
