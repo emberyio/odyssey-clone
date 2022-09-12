@@ -29,7 +29,7 @@ function Nav() {
     <div className="relative z-20 p-10 w-96">
       <Link href="/">
         <a className="text-4xl font-bold uppercase text-theme-paragraphs">
-          odyssey
+          Embery
         </a>
       </Link>
       <ul className="mt-5 space-y-5 font-semibold text-theme-paragraphs">
