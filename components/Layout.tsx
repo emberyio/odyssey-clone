@@ -9,9 +9,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col min-h-screen lg:flex-row bg-theme-dark">
-      <div className="lg:w-1/2 relative min-h-[50vh]">
+      <div className="lg:w-[50vw] relative min-h-[50vh]">
         <Overlay />
-        <div className="fixed top-0 left-0 w-full h-full">
+        <div className="fixed top-0 left-0 lg:w-[50vw] w-full h-full">
           <Nav />
           <ImageSlider />
         </div>
@@ -122,7 +122,7 @@ function ImageSlider() {
           <SwiperSlide key={i}>
             <div className="w-full h-full">
               <img
-                src={`https://source.unsplash.com/random/?food&gravity=center&${i}`}
+                src={`/images/slider (${i + 1}).jpg`}
                 className="object-cover w-full h-full select-none"
                 alt=""
               />
