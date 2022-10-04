@@ -34,10 +34,18 @@ function Nav() {
       </Link>
       <ul className="mt-5 space-y-5 font-semibold text-theme-paragraphs">
         <li className="duration-300 cursor-pointer group hover:text-theme-accent">
-          <Link href="menu">
+          <Link href="menu-1">
             <a>
               <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
               Menu
+            </a>
+          </Link>
+        </li>
+        <li className="duration-300 cursor-pointer group hover:text-theme-accent">
+          <Link href="menu-2">
+            <a>
+              <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+              Takeaway Menu
             </a>
           </Link>
         </li>

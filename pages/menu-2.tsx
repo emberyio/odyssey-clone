@@ -2,34 +2,40 @@ import React from "react";
 
 const items = [
   {
-    name: "In amet dui egestas.",
+    name: "GAMBERI ALL'AGLIO",
     description:
-      "Luctus congue in leo massa dui tortor. Phasellus neque aliquet vivamus in posuere nibh facilisi.",
-    price: 29,
+      "grilled prawns w/ garlic, chilli & white wine served w/ pane di casa bread",
+    price: 28,
   },
   {
-    name: "In amet dui egestas.",
+    name: "POLPETTE DI CARNE",
     description:
-      "Luctus congue in leo massa dui tortor. Phasellus neque aliquet vivamus in posuere nibh facilisi.",
-    price: 29,
+      "Italian meatballs in a thick Napoli sauce served w/ pane di casa bread",
+    price: 21,
   },
   {
-    name: "In amet dui egestas.",
+    name: "ARANCINI DI RISO",
     description:
-      "Luctus congue in leo massa dui tortor. Phasellus neque aliquet vivamus in posuere nibh facilisi.",
-    price: 29,
+      "rice balls, filled w/ cheese & Bolognese sauce, crumbed & fried",
+    price: 21,
   },
   {
-    name: "In amet dui egestas.",
+    name: "CALAMARI FRITTI",
     description:
-      "Luctus congue in leo massa dui tortor. Phasellus neque aliquet vivamus in posuere nibh facilisi.",
-    price: 29,
+      "shallow fried calamari served w/ a fennel, orange & rocket salad w/ vinaigrette",
+    price: 25,
   },
   {
-    name: "In amet dui egestas.",
+    name: "INSALATA DI VITELLO",
     description:
-      "Luctus congue in leo massa dui tortor. Phasellus neque aliquet vivamus in posuere nibh facilisi.",
-    price: 29,
+      "tender eye fillet, grilled & served on a gourmet salad w/ honey soy dressing",
+    price: 30,
+  },
+  {
+    name: "CALAMARI ALLA GRIGLIA",
+    description:
+      "seasoned tender grilled calamari served on a continental salad w/ olive oil & balsamic vinegar",
+    price: 27,
   },
 ];
 
@@ -47,9 +53,7 @@ export default function menu() {
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
       <div className="mt-10 space-y-10">
-        <Menu title="Lunch Menu" items={items} />
-        <Menu title="Lunch Menu" items={items} />
-        <Menu title="Lunch Menu" items={items} />
+        <Menu title="STARTERS" items={items} />
       </div>
     </div>
   );
