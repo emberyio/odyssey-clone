@@ -1,3 +1,4 @@
+import Script from "next/script";
 import React from "react";
 
 export default function bookatable() {
@@ -18,26 +19,18 @@ export default function bookatable() {
         <div className="flex items-center mb-5">
           <span className="inline-block w-1.5 h-1.5 mr-1 duration-300 rounded-full bg-theme-accent"></span>
           <span className="inline-block w-3 h-3 mr-3 duration-300 rounded-full bg-theme-accent"></span>
-          <h2 className="text-4xl font-semibold text-theme-paragraphs">
+          <h2 className="text-4xl font-semibold menu-font text-theme-paragraphs">
             Book a Table
           </h2>
         </div>
         <div className="space-y-5">
-          <div className="flex gap-5">
-            <Input placeholder="First name" />
-            <Input placeholder="Last name" />
-          </div>
-          <Input placeholder="Phone" />
-          <Input placeholder="Email" />
-          <div className="flex gap-5">
-            <Input placeholder="Number of guests" />
-            <Input placeholder="Date" />
-            <Input placeholder="Time" />
-          </div>
+          <iframe
+            className="w-full min-h-[50vh]"
+            data-id="nbi-widget"
+            src="https://bookings.nowbookit.com/?accountid=0a63a153-19fe-480b-826d-405741e20efa&venueid=7762&theme=light&colors=hex,9e9e9e"
+          ></iframe>
+          <Script src="https://plugins.nowbookit.com/iframe-resizer-build/bundle.js" />
         </div>
-        <button className="w-full px-8 py-4 mt-10 font-semibold uppercase duration-300 rounded-full bg-theme-accent hover:bg-white">
-          Reserve
-        </button>
       </div>
     </div>
   );

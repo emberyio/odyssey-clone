@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -22,9 +23,11 @@ const Home: NextPage = () => {
             We use only the finest local ingredients available and offer
             seasonal specials throughout the year.
           </p>
-          <button className="px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
-            BOOK A TABLE
-          </button>
+          <Link href="book-a-table">
+            <a className="px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
+              BOOK A TABLE
+            </a>
+          </Link>
         </div>
         <div className="flex justify-between">
           <div>
@@ -32,7 +35,7 @@ const Home: NextPage = () => {
               CALL US
             </div>
             <div className="text-xl font-semibold text-theme-paragraphs">
-              1 800-123-4567
+              1800 LUIGIS
             </div>
           </div>
           <div>
@@ -40,7 +43,7 @@ const Home: NextPage = () => {
               LOCATION
             </div>
             <div className="text-xl font-semibold text-theme-paragraphs">
-              5678 Seltice Way Coeur D Alene
+              Shop 1-2/40 The Esplanade, Torquay VIC
             </div>
           </div>
         </div>
