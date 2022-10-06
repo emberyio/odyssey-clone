@@ -6,6 +6,8 @@ import { Autoplay, EffectCreative } from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+const NUM_IMAGES = 8;
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col min-h-screen lg:flex-row bg-theme-dark">
@@ -118,7 +120,7 @@ function ImageSlider() {
         speed={2000}
         className="w-full h-full"
       >
-        {Array.from({ length: 5 }, (_, i) => (
+        {Array.from({ length: NUM_IMAGES }, (_, i) => (
           <SwiperSlide key={i}>
             <div className="w-full h-full">
               <img
