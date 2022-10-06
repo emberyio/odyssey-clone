@@ -286,20 +286,21 @@ function Menu({
       <div className="flex items-center border-b-[1px] border-gray-500/50 pb-10">
         <span className="inline-block w-1.5 h-1.5 mr-1 duration-300 rounded-full bg-theme-accent"></span>
         <span className="inline-block w-3 h-3 mr-3 duration-300 rounded-full bg-theme-accent"></span>
-        <h2 className="text-5xl font-semibold menu-font text-theme-paragraphs">
-          {title}
+        <h2 className="text-5xl font-semibold capitalize menu-font text-theme-paragraphs">
+          {title.toLowerCase()}
         </h2>
       </div>
       <table className="w-full">
         <tbody>
           {items.map((item) => (
             <tr key={item.name}>
-              <td className="menu-font text-lg lg:text-2xl pt-5 pb-5 border-b-[1px] border-dotted border-gray-500/50  text-theme-paragraphs">
-                {item.name}
+              <td className="text-lg lg:text-2xl pt-5 pb-5 border-b-[1px] border-dotted border-gray-500/50  text-theme-paragraphs">
+                <div>{item.name.toLowerCase()}</div>
+                <div className="text-sm text-gray-500">
+                  {item.description.toLowerCase()}
+                </div>
               </td>
-              <td className="pt-5 pb-5 pr-10 text-gray-500 border-b-[1px] border-gray-500/50  border-dotted">
-                {item.description}
-              </td>
+
               <td className="pt-5 pb-5 border-b-[1px] border-dotted border-gray-500/50  text-theme-paragraphs">
                 ${item.price}
               </td>

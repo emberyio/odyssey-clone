@@ -382,10 +382,10 @@ function Menu({
           {items.map((item) => (
             <tr key={item.name}>
               <td className="text-lg lg:text-2xl pt-5 pb-5 border-b-[1px] border-dotted border-gray-500/50  text-theme-paragraphs">
-                {item.name}
+                {item.name.toLowerCase()}
               </td>
               <td className="pt-5 pb-5 pr-10 text-gray-500 border-b-[1px] border-gray-500/50  border-dotted">
-                {item.description}
+                {item.description.toLowerCase()}
               </td>
               <td className="pt-5 pb-5 border-b-[1px] border-dotted border-gray-500/50  text-theme-paragraphs">
                 ${item.price}
