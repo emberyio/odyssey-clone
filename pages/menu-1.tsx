@@ -344,7 +344,7 @@ export default function menu() {
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
       <div className="mt-10 space-y-10">
-        <Menu title="LUNCH MENU" items={items} />
+        <Menu title="Lunch menu" items={items} />
         <Menu title="Antipasti" items={items2} />
         <Menu title="Primi Piatti" items={items3} />
         <Menu title="Secondi Piatti" items={items4} />
@@ -373,7 +373,7 @@ function Menu({
       <div className="flex items-center border-b-[1px] border-gray-500/50 pb-10">
         <span className="inline-block w-1.5 h-1.5 mr-1 duration-300 rounded-full bg-theme-accent"></span>
         <span className="inline-block w-3 h-3 mr-3 duration-300 rounded-full bg-theme-accent"></span>
-        <h2 className="text-5xl font-semibold menu-font text-theme-paragraphs">
+        <h2 className="text-5xl font-semibold capitalize menu-font text-theme-paragraphs">
           {title}
         </h2>
       </div>
@@ -381,7 +381,7 @@ function Menu({
         <tbody>
           {items.map((item) => (
             <tr key={item.name}>
-              <td className="menu-font text-lg lg:text-2xl pt-5 pb-5 border-b-[1px] border-dotted border-gray-500/50  text-theme-paragraphs">
+              <td className="text-lg lg:text-2xl pt-5 pb-5 border-b-[1px] border-dotted border-gray-500/50  text-theme-paragraphs">
                 {item.name}
               </td>
               <td className="pt-5 pb-5 pr-10 text-gray-500 border-b-[1px] border-gray-500/50  border-dotted">
