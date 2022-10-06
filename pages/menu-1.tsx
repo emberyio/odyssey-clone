@@ -333,13 +333,14 @@ const items8 = [
 export default function menu() {
   return (
     <div className="p-5 lg:p-10 bg-theme-dark">
-      <div className="flex justify-between ">
-        <h1 className="flex-1 heading text-theme-accent text-[10vw] leading-[98%]">
-          MENU
+      <div className="flex items-center justify-between ">
+        <h1 className="flex-1 heading text-theme-accent text-[30vw] lg:text-[10vw] leading-[98%]">
+          Dine In
         </h1>
         <p className="flex-1 p-5 text-gray-500 border-l-[1px] border-gray-500/50">
-          Eget vestibulum dignissim enim, vel nunc. Orci, vel urna vel viverra
-          sed suscipit lorem nunc. Tellus convallis.
+          Vegetarian & gluten free options available
+          <br />
+          Please notify your waitstaff of any food intolerances or allergies.
         </p>
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
