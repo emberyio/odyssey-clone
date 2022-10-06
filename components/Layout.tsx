@@ -1,21 +1,50 @@
-import { motion, useAnimationControls } from "framer-motion";
+import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Autoplay, EffectCreative } from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import logo from "../public/Luigis-Logo-Final1500-1500-px_adobe_express.svg";
-import { BiMenu } from "react-icons/bi";
 const NUM_IMAGES = 8;
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const [isOpenNav, setIsOpenNav] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    setIsOpenNav(false);
+  }, [router]);
+
   return (
     <div className="flex flex-col min-h-screen lg:flex-row bg-theme-dark">
-      <div className="absolute z-10 top-5 left-5">
-        <BiMenu className="text-5xl text-white" />
+      <div
+        className="fixed z-[100] cursor-pointer top-5 left-5"
+        onClick={() => setIsOpenNav(!isOpenNav)}
+      >
+        {!isOpenNav && <AiOutlineMenu className="text-5xl text-white" />}
+        {isOpenNav && <AiOutlineClose className="text-5xl text-white" />}
       </div>
+
+      <AnimatePresence>
+        {isOpenNav && (
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: 1,
+            }}
+            exit={{
+              opacity: 0,
+            }}
+            className="z-[90]"
+          >
+            <Nav />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div className="lg:w-[50vw] relative min-h-[50vh]">
         <Overlay />
@@ -26,7 +55,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="relative flex items-center justify-center w-full h-full">
             <Link href="/">
               <a className="">
-                <Image alt="logo" src={logo} width="300" height="300" />
+                <Image alt="logo" src={logo} width="250" height="250" />
               </a>
             </Link>
           </div>
@@ -42,12 +71,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 function Nav() {
   return (
-    <div className="relative z-20 h-full p-10 w-96">
-      <ul className="space-y-5 font-semibold lg:absolute bottom-5 first-letter:mt-5 text-theme-paragraphs">
+    <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-theme-dark ">
+      <ul className="space-y-10 text-3xl font-semibold first-letter:mt-5 text-theme-paragraphs">
         <li className="duration-300 cursor-pointer group hover:text-theme-accent">
           <Link href="menu-1">
             <a>
-              <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+              <span className=" group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
               Menu
             </a>
           </Link>
