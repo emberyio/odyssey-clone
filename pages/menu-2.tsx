@@ -258,12 +258,12 @@ export default function menu() {
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
       <div className="mt-10 space-y-10">
-        <Menu title="SWEETS" items={items1} />
         <Menu title="STARTERS" items={items2} />
-        <Menu title="SIDES" items={items3} />
-        <Menu title="PIZZAS" items={items4} />
         <Menu title="PASTA & RISOTTO" items={items5} />
         <Menu title="MAINS" items={items6} />
+        <Menu title="PIZZAS" items={items4} />
+        <Menu title="SIDES" items={items3} />
+        <Menu title="SWEETS" items={items1} />
         <Menu title="DRINKS" items={items7} />
       </div>
     </div>

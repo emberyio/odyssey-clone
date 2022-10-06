@@ -351,7 +351,11 @@ export default function menu() {
         <Menu title="Contorni" items={items5} />
         <Menu title="Paste e Risotti" items={items6} />
         <Menu title="Pizze" items={items7} />
-        <Menu title="Bambini" items={items8} />
+        <Menu
+          title="Bambini"
+          desc="KIDS UNDER 12 - ALL MEALS $14"
+          items={items8}
+        />
       </div>
     </div>
   );
@@ -360,8 +364,10 @@ export default function menu() {
 function Menu({
   title,
   items,
+  desc,
 }: {
   title: string;
+  desc?: string;
   items: {
     name: string;
     description: string;
@@ -370,12 +376,15 @@ function Menu({
 }) {
   return (
     <div className="w-full">
-      <div className="flex items-center border-b-[1px] border-gray-500/50 pb-10">
-        <span className="inline-block w-1.5 h-1.5 mr-1 duration-300 rounded-full bg-theme-accent"></span>
-        <span className="inline-block w-3 h-3 mr-3 duration-300 rounded-full bg-theme-accent"></span>
-        <h2 className="text-5xl font-semibold capitalize menu-font text-theme-paragraphs">
-          {title}
-        </h2>
+      <div className="pb-10 border-gray-500/50 border-b-[1px] ">
+        <div className="flex items-center ">
+          <span className="inline-block w-1.5 h-1.5 mr-1 duration-300 rounded-full bg-theme-accent"></span>
+          <span className="inline-block w-3 h-3 mr-3 duration-300 rounded-full bg-theme-accent"></span>
+          <h2 className="text-5xl font-semibold capitalize menu-font text-theme-paragraphs">
+            {title}
+          </h2>
+        </div>
+        <p className="mt-3 text-gray-400">{desc}</p>
       </div>
       <table className="w-full">
         <tbody>
