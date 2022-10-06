@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Six+Caps&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .heading {
   font-family: "Six Caps", sans-serif;
+}
+
+.menu-font {
+  font-family: "Dancing Script", cursive;
 }
