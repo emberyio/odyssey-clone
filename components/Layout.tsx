@@ -1,21 +1,35 @@
 import { motion, useAnimationControls } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { Autoplay, EffectCreative } from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import logo from "../public/Luigis-Logo-Final1500-1500-px_adobe_express.svg";
+import { BiMenu } from "react-icons/bi";
 const NUM_IMAGES = 8;
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex flex-col min-h-screen lg:flex-row bg-theme-dark">
+      <div className="absolute z-10 top-5 left-5">
+        <BiMenu className="text-5xl text-white" />
+      </div>
+
       <div className="lg:w-[50vw] relative min-h-[50vh]">
         <Overlay />
-        <div className="fixed top-0 left-0 lg:w-[50vw] w-full h-full">
-          <Nav />
+
+        <div className="fixed h-[50vh] lg:h-full top-0 left-0 lg:w-[50vw] w-full ">
           <ImageSlider />
+          <div className="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+          <div className="relative flex items-center justify-center w-full h-full">
+            <Link href="/">
+              <a className="">
+                <Image alt="logo" src={logo} width="300" height="300" />
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="relative lg:w-1/2">
@@ -28,13 +42,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 function Nav() {
   return (
-    <div className="relative z-20 p-10 w-96">
-      <Link href="/">
-        <a className="text-4xl font-bold uppercase theme-font text-theme-paragraphs">
-          Luigi&apos;s italian restaurant
-        </a>
-      </Link>
-      <ul className="mt-5 space-y-5 font-semibold text-theme-paragraphs">
+    <div className="relative z-20 h-full p-10 w-96">
+      <ul className="space-y-5 font-semibold lg:absolute bottom-5 first-letter:mt-5 text-theme-paragraphs">
         <li className="duration-300 cursor-pointer group hover:text-theme-accent">
           <Link href="menu-1">
             <a>
