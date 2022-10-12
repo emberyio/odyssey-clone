@@ -5,7 +5,7 @@ export default function Blog() {
     <div className="min-h-full p-5 lg:p-10 bg-theme-dark">
       <div className="flex justify-between ">
         <h1 className="pr-5 text-3xl lg:text-6xl menu-font text-theme-accent">
-          BLOG AND EVENTS
+          PHOTO AND EVENTS
         </h1>
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>

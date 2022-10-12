@@ -251,11 +251,24 @@ export default function menu() {
         <h1 className="flex-1 heading text-theme-accent text-[20vw] lg:text-[10vw] leading-[98%]">
           TAKEAWAY
         </h1>
-        <p className="flex-1 p-5 text-gray-500 border-l-[1px] border-gray-500/50">
-          Vegetarian & gluten free options available
-          <br />
-          Please notify your waitstaff of any food intolerances or allergies.
-        </p>
+        <div className="border-l-[1px] p-5 flex-1 border-gray-500/50">
+          <p className="text-gray-500 ">
+            VEGETARIAN C GLUTEN FREE OPTION AVAILABLE PLEASE NOTIFY US OF ANY
+            FOOD INTOLERANCES OR ALLERGIES
+            <br />
+            YOU CAN CONTACT US TO PLACE AN ORDER OR SIMPLY USE OUR ONLINE
+            SERVICE BY CLICKING THE LINK BELOW WE ALSO OFFER DELIVERY SERVICES
+            VIA INHOUSE MENUNG OR UBEREATS
+          </p>
+          <div className="flex justify-end pt-5">
+            <a
+              href="#"
+              className="text-lg text-red-500 uppercase duration-300 hover:underline"
+            >
+              ORDER NOW
+            </a>
+          </div>
+        </div>
       </div>
 
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>

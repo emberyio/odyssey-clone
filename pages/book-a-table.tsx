@@ -9,8 +9,9 @@ export default function bookatable() {
           RESERVATION
         </h1>
         <p className=" p-5 text-gray-500 border-l-[1px] border-gray-500/50">
-          Eget vestibulum dignissim enim, vel nunc. Orci, vel urna vel viverra
-          sed suscipit lorem nunc. Tellus convallis.
+          WHILE WE ENDEVOUR TO GIVE CUSTOMERS THEIR PREFFED SEATING. <br />{" "}
+          REQUESTS DURING BUSY PERIODS CAN NOT ALWAYS BE FULLFILED. <br />{" "}
+          PARTICULARLY FOR OUTDOOR SEATING DURING WARM WEATHER
         </p>
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>

@@ -8,31 +8,45 @@ export default function contact() {
           CONTACT
         </h1>
         <p className=" p-5 text-gray-500 border-l-[1px] border-gray-500/50">
-          Eget vestibulum dignissim enim, vel nunc. Orci, vel urna vel viverra
-          sed suscipit lorem nunc. Tellus convallis.
+          FOR RESERVATIONS UP TO 6 GUESTS. PLEASE PLACE YOUR BOOKING VIA OUR
+          ONLINE RESERVATIONS SYSTEM. WHICH REFLECTS REAL TIME AVAILABILITY IN
+          THE RESTAURANT. RESERVATIONS FOR 7 GUESTS OR MORE CAN BE MADE VIA
+          TELEPHONE.
         </p>
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
       <div>
-        <div className="flex my-10">
+        <div className="flex flex-col gap-10 my-10 lg:flex-row">
           <div className="flex-1">
             <div className="text-xs text-theme-accent">CALL US</div>
-            <div className="text-xl text-theme-paragraphs">1800 LUIGIS</div>
+            <div className="text-xl text-theme-paragraphs">
+              1800 LUIGIS / 1800 584447
+            </div>
           </div>
           <div className="flex-1">
             <div className="text-xs text-theme-accent">LOCATION</div>
-            <div className="text-xl text-theme-paragraphs">
+            <div className="lg:text-xl text-theme-paragraphs">
               Shop 1-2/40 The Esplanade, Torquay VIC
             </div>
           </div>
         </div>
-        <div className="flex my-10">
+        <div className="flex flex-col gap-10 my-10 lg:flex-row">
           <div className="flex-1">
             <div className="text-xs text-theme-accent">EMAIL US</div>
-            <div className="text-xl text-theme-paragraphs">
+            <div className="lg:text-xl text-theme-paragraphs">
               <a href="mailto:info@luigisitalianrestaurant.com.au">
                 info@luigisitalianrestaurant.com.au
               </a>
+            </div>
+          </div>
+          <div className="flex-1">
+            <div className="text-xs uppercase text-theme-accent">
+              Trading Hours
+            </div>
+            <div className="lg:text-lg text-theme-paragraphs">
+              Trading Hours Tue - Sun 11:30am - 9pm (peak season) <br />
+              Wed - Fad 5pm - 9pm (off-peak season) <br />
+              Sat - Sun / 11:30am - 9pm (off-peak season)
             </div>
           </div>
         </div>

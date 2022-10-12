@@ -16,11 +16,11 @@ const Home: NextPage = () => {
       <div className="flex flex-col justify-between h-full gap-20 p-10">
         <div>
           <h1 className="heading text-theme-paragraphs text-[10vw] leading-[98%]">
-            <span className="text-theme-accent">RESTAURANT</span> OF EUROPEAN
-            CUISINE
+            <span className="text-theme-accent">LUIGI&apos;S</span> <br />
+            ITALIAN RESTAURANT
           </h1>
           <p className="max-w-lg my-10 text-xl text-slate-400">
-            We use only the finest local ingredients available and offer
+            We use only the finest imported ingredients available and offer
             seasonal specials throughout the year.
           </p>
           <Link href="book-a-table">
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
               CALL US
             </div>
             <div className="text-xl font-semibold text-theme-paragraphs">
-              1800 LUIGIS
+              1800 584447
             </div>
           </div>
           <div>

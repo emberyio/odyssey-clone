@@ -107,10 +107,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </Link>
                 </li>
                 <li className="duration-300 cursor-pointer group hover:text-theme-accent">
-                  <Link href="blog">
+                  <Link href="photo">
                     <a>
                       <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-                      Blog
+                      Photos
                     </a>
                   </Link>
                 </li>
@@ -204,10 +204,10 @@ function Nav({ onMenuClick }: { onMenuClick: () => void }) {
           </Link>
         </li>
         <li className="duration-300 cursor-pointer group hover:text-theme-accent">
-          <Link href="blog">
+          <Link href="photo">
             <a>
               <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-              Blog
+              Photos
             </a>
           </Link>
         </li>

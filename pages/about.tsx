@@ -19,18 +19,18 @@ export default function Blog() {
         </div>
         <div className="space-y-5 text-gray-300">
           <p>
-            The proprietor of Luigi’s Italian Restaurant, Lou Volpe, has spent
-            his formative years in both Italy & Australia, as his family built a
-            name for themselves in the hospitality industry.
+            LUIGI S PROPRIETOR LOU VOLPE. WAS BORN IN A SMALL COASTAL TOWN OF
+            CARIATI. HE SPENT HIS FORMATIVE YEARS IN BOTH ITALY C AUSTRALIA AS
+            HIS FAMILY BUILT A NAME FOR THEMSELVES IN THE HOSPITALITY INDUSTRY
           </p>
           <p>
-            Today, his extensive knowledge of Italian food and culture allow him
-            to bring a truly authentic experience to the Victorian Surf Coast.
+            TODAY. HIS EXTENSIVE KNOWLEDGE OF ITALIAN F000 AND CULTURE ALLOW HIM
+            TO BRING A TRULY AUTHENTIC EXPERIENCE TO THE VICTORIAN SURF COAST.
           </p>
           <p>
-            Lou and his wife Steph, together with all the team at Luigi’s
-            Italian Restaurant, are committed to provide quality and friendly
-            service to locals & holiday makers alike.
+            LOU AND HIS WIFE MPH TOGETHER WITH ALL THE TEAM Al LUIGI S ITALIAN
+            RESTAURANT. ARE COMMITTED 10 PROVIDE DUALITY AND FRIENDLY SERVICE TO
+            LOCALS C HOLIDAY MAKERS ALIKE.
           </p>
           <img
             src={`https://source.unsplash.com/random/?restaurant&gravity=center`}
