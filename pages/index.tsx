@@ -35,7 +35,7 @@ const Home: NextPage = () => {
               CALL US
             </div>
             <div className="text-xl font-semibold text-theme-paragraphs">
-              1800 584447
+              1800 LUIGIS / 1800 584447
             </div>
           </div>
           <div>

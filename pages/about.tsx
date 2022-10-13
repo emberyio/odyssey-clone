@@ -4,7 +4,7 @@ export default function Blog() {
   return (
     <div className="min-h-full p-5 lg:p-10 bg-theme-dark">
       <div className="flex justify-between ">
-        <h1 className=" heading text-theme-accent text-[10vw] pr-5 leading-[98%]">
+        <h1 className=" heading text-theme-accent text-6xl lg:text-[10vw] pr-5 leading-[98%]">
           ABOUT Luigi&apos;s
         </h1>
       </div>

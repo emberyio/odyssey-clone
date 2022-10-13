@@ -3,7 +3,7 @@ import React from "react";
 export default function contact() {
   return (
     <div className="min-h-full p-5 lg:p-10 bg-theme-dark">
-      <div className="flex justify-between ">
+      <div className="flex items-center justify-between ">
         <h1 className=" heading text-theme-accent text-[10vw] pr-5 leading-[98%]">
           CONTACT
         </h1>
@@ -53,7 +53,7 @@ export default function contact() {
         <div>
           <div className="aspect-square lg:aspect-video">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.7353304736775!2d144.32610019999998!3d-38.331959399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad46f3e129e6f1f%3A0xf4bb5ca151cb0062!2s1%202%2F40%20The%20Esplanade%2C%20Torquay%20VIC%203228%2C%20%C3%9Ac!5e0!3m2!1svi!2s!4v1665074197646!5m2!1svi!2s"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3129.740400864836!2d144.326127!3d-38.331842!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad46f3e129e6f1f%3A0xf4bb5ca151cb0062!2s1%202%2F40%20The%20Esplanade%2C%20Torquay%20VIC%203228%2C%20%C3%9Ac!5e0!3m2!1svi!2sus!4v1665664172201!5m2!1svi!2sus"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full"

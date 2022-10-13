@@ -248,9 +248,11 @@ export default function menu() {
   return (
     <div className="p-5 lg:p-10 bg-theme-dark">
       <div className="flex items-center justify-between ">
-        <h1 className="flex-1 heading text-theme-accent text-[20vw] lg:text-[10vw] leading-[98%]">
-          TAKEAWAY
-        </h1>
+        <div className="flex-1 ">
+          <h1 className="heading text-theme-accent text-[20vw] lg:text-[10vw] leading-[98%]">
+            TAKEAWAY
+          </h1>
+        </div>
         <div className="border-l-[1px] p-5 flex-1 border-gray-500/50">
           <p className="text-gray-500 ">
             VEGETARIAN C GLUTEN FREE OPTION AVAILABLE PLEASE NOTIFY US OF ANY
@@ -260,17 +262,16 @@ export default function menu() {
             SERVICE BY CLICKING THE LINK BELOW WE ALSO OFFER DELIVERY SERVICES
             VIA INHOUSE MENUNG OR UBEREATS
           </p>
-          <div className="flex justify-end pt-5">
-            <a
-              href="#"
-              className="text-lg text-red-500 uppercase duration-300 hover:underline"
-            >
-              ORDER NOW
-            </a>
-          </div>
         </div>
       </div>
-
+      <div className="flex items-center justify-center pt-5">
+        <a
+          href="#"
+          className="px-5 py-2 text-lg text-red-500 uppercase duration-300 border-2 border-red-500 hover:text-white hover:bg-red-500 "
+        >
+          ORDER NOW
+        </a>
+      </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
       <div className="mt-10 space-y-10">
         <Menu title="STARTERS" items={items2} />

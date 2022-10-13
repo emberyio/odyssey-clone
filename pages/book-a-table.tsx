@@ -4,7 +4,7 @@ import React from "react";
 export default function bookatable() {
   return (
     <div className="min-h-full p-5 lg:p-10 bg-theme-dark">
-      <div className="flex justify-between ">
+      <div className="flex items-center justify-between">
         <h1 className=" heading text-theme-accent text-[10vw] pr-5 leading-[98%]">
           RESERVATION
         </h1>
