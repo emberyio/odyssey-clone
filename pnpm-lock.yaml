@@ -5,6 +5,7 @@ specifiers:
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
   autoprefixer: ^10.4.8
+  csv-parse: ^5.3.1
   eslint: 8.21.0
   eslint-config-next: 12.2.4
   framer-motion: ^7.0.0
@@ -18,6 +19,7 @@ specifiers:
   typescript: 4.7.4
 
 dependencies:
+  csv-parse: 5.3.1
   framer-motion: 7.0.0_biqbaboplfbrettd7655fr4n2y
   next: 12.2.4_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -657,6 +659,10 @@ packages:
   /csstype/3.1.0:
     resolution: {integrity: sha512-uX1KG+x9h5hIJsaKR9xHUeUraxf8IODOwq9JLNPq6BwB04a/xgpq3rcx47l5BZu5zBPlgD342tdke3Hom/nJRA==}
     dev: true
+
+  /csv-parse/5.3.1:
+    resolution: {integrity: sha512-R4Hv6eGJNzgcKdThZ6XORbSQ873HVcNke74QIq+LbwpT90LaZ8Xzl7KKiuIP16xq/P7ofzRt0h7S0xm+fVScsw==}
+    dev: false
 
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
