@@ -35,7 +35,7 @@ export default function MenuPage({ menus }: { menus: Menu[] }) {
       </div>
       <div className="flex items-center justify-center pt-5">
         <a
-          href="/book-now"
+          href="/book-a-table"
           className="px-5 py-2 text-lg text-red-500 uppercase duration-300 border-2 border-red-500 hover:text-white hover:bg-red-500 "
         >
           ORDER NOW
