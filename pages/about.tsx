@@ -1,5 +1,6 @@
+import Image from "next/image";
 import React from "react";
-
+import ht from "../public/images/Cariati.jpg";
 export default function Blog() {
   return (
     <div className="min-h-full p-5 lg:p-10 bg-theme-dark">
@@ -32,8 +33,8 @@ export default function Blog() {
             Italian Restaurant, are committed to provide quality and friendly
             service to locals & holiday makers alike.
           </p>
-          <img
-            src={`https://source.unsplash.com/random/?restaurant&gravity=center`}
+          <Image
+            src={ht}
             alt=""
             className="object-cover w-full h-full my-5 rounded-xl aspect-video"
           />
