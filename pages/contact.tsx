@@ -53,7 +53,7 @@ export default function contact() {
         <div>
           <div className="aspect-square lg:aspect-video">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3129.740400864836!2d144.326127!3d-38.331842!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad46f3e129e6f1f%3A0xf4bb5ca151cb0062!2s1%202%2F40%20The%20Esplanade%2C%20Torquay%20VIC%203228%2C%20%C3%9Ac!5e0!3m2!1svi!2sus!4v1665664172201!5m2!1svi!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3129.735513092403!2d144.32391151590312!3d-38.33195517164543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad46f3e129e6f1f%3A0xf4bb5ca151cb0062!2s1%202%2F40%20The%20Esplanade%2C%20Torquay%20VIC%203228%2C%20Australia!5e0!3m2!1sen!2s!4v1665995660379!5m2!1sen!2s"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full"

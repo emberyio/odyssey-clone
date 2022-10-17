@@ -89,7 +89,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     Menu
                   </a>
                 </li>
-
+                <li className="duration-300 cursor-pointer group hover:text-theme-accent">
+                  <Link href="menu-2">
+                    <a>
+                      <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+                      Order Takeaway
+                    </a>
+                  </Link>
+                </li>
                 <li className="duration-300 cursor-pointer group hover:text-theme-accent">
                   <Link href="book-a-table">
                     <a>
@@ -186,7 +193,14 @@ function Nav({ onMenuClick }: { onMenuClick: () => void }) {
             Menu
           </a>
         </li>
-
+        <li className="duration-300 cursor-pointer group hover:text-theme-accent">
+          <Link href="menu-2">
+            <a>
+              <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+              Order Takeaway
+            </a>
+          </Link>
+        </li>
         <li className="duration-300 cursor-pointer group hover:text-theme-accent">
           <Link href="book-a-table">
             <a>
@@ -258,11 +272,12 @@ function ImageSlider() {
       >
         {Array.from({ length: NUM_IMAGES }, (_, i) => (
           <SwiperSlide key={i}>
-            <div className="w-full h-full">
-              <img
+            <div className="relative w-full h-full">
+              <Image
                 src={`/images/slider (${i + 1}).jpg`}
                 className="object-cover w-full h-full select-none"
                 alt=""
+                layout="fill"
               />
             </div>
           </SwiperSlide>
