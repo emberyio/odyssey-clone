@@ -24,18 +24,18 @@ export default function MenuPage({ menus }: { menus: Menu[] }) {
         </div>
         <div className="border-l-[1px] p-5 flex-1 border-gray-500/50">
           <p className="text-gray-500 ">
-            VEGETARIAN C GLUTEN FREE OPTION AVAILABLE PLEASE NOTIFY US OF ANY
+            VEGETARIAN & GLUTEN FREE OPTION AVAILABLE. PLEASE NOTIFY US OF ANY
             FOOD INTOLERANCES OR ALLERGIES
             <br />
             YOU CAN CONTACT US TO PLACE AN ORDER OR SIMPLY USE OUR ONLINE
-            SERVICE BY CLICKING THE LINK BELOW WE ALSO OFFER DELIVERY SERVICES
-            VIA INHOUSE MENUNG OR UBEREATS
+            SERVICE BY CLICKING THE LINK BELOW. WE ALSO OFFER DELIVERY SERVICES
+            VIA INHOUSE. MENULOG OR UBEREATS.
           </p>
         </div>
       </div>
       <div className="flex items-center justify-center pt-5">
         <a
-          href="#"
+          href="/book-now"
           className="px-5 py-2 text-lg text-red-500 uppercase duration-300 border-2 border-red-500 hover:text-white hover:bg-red-500 "
         >
           ORDER NOW
