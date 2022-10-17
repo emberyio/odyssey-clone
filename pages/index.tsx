@@ -29,7 +29,7 @@ const Home: NextPage = () => {
             </a>
           </Link>
         </div>
-        <div className="flex justify-between">
+        <div className="flex flex-col justify-between gap-10 lg:flex-row">
           <div>
             <div className="font-mono text-sm tracking-wide text-theme-accent">
               CALL US
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div>
-            <div className="font-mono text-sm tracking-wide text-right text-theme-accent">
+            <div className="font-mono text-sm tracking-wide lg:text-right text-theme-accent">
               LOCATION
             </div>
             <div className="text-xl font-semibold text-theme-paragraphs">
