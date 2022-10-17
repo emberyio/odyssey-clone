@@ -84,16 +84,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="hidden lg:block">
               <ul className="pb-5 pl-10 space-y-10 text-3xl font-semibold first-letter:mt-5 text-theme-paragraphs">
                 <li className="duration-300 cursor-pointer group hover:text-theme-accent">
-                  <a onClick={() => setIsMenuOpen(true)}>
-                    <span className=" group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-                    Menu
-                  </a>
-                </li>
-                <li className="duration-300 cursor-pointer group hover:text-theme-accent">
-                  <Link href="menu-2">
+                  <Link href="/menu-1">
                     <a>
                       <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-                      Order Takeaway
+                      Dine-In Menu
+                    </a>
+                  </Link>
+                </li>
+                <li className="duration-300 cursor-pointer group hover:text-theme-accent">
+                  <Link href="https://orders.luigisitalianrestaurant.com.au/">
+                    <a>
+                      <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+                      Take-Away Menu
                     </a>
                   </Link>
                 </li>
@@ -187,17 +189,19 @@ function Nav({ onMenuClick }: { onMenuClick: () => void }) {
   return (
     <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-theme-dark ">
       <ul className="space-y-10 text-3xl font-semibold first-letter:mt-5 text-theme-paragraphs">
-        <li className="duration-300 cursor-pointer group hover:text-theme-accent">
-          <a onClick={onMenuClick}>
-            <span className=" group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-            Menu
-          </a>
-        </li>
-        <li className="duration-300 cursor-pointer group hover:text-theme-accent">
-          <Link href="menu-2">
+        <li>
+          <Link href="/menu-1">
             <a>
               <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
-              Order Takeaway
+              Dine-In Menu
+            </a>
+          </Link>
+        </li>
+        <li className="duration-300 cursor-pointer group hover:text-theme-accent">
+          <Link href="https://orders.luigisitalianrestaurant.com.au/">
+            <a>
+              <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
+              Take-Away Menu
             </a>
           </Link>
         </li>
