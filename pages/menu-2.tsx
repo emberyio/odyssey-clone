@@ -2,6 +2,7 @@ import { parse } from "csv-parse";
 import { GetStaticProps } from "next";
 import React from "react";
 import fs from "fs";
+import Link from "next/link";
 
 interface MenuItem {
   name: string;
@@ -34,12 +35,11 @@ export default function MenuPage({ menus }: { menus: Menu[] }) {
         </div>
       </div>
       <div className="flex items-center justify-center pt-5">
-        <a
-          href="/book-a-table"
-          className="px-5 py-2 text-lg text-red-500 uppercase duration-300 border-2 border-red-500 hover:text-white hover:bg-red-500 "
-        >
-          ORDER NOW
-        </a>
+        <Link href="/book-a-table">
+          <a className="px-5 py-2 text-lg text-red-500 uppercase duration-300 border-2 border-red-500 hover:text-white hover:bg-red-500 ">
+            ORDER NOW
+          </a>
+        </Link>
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
       <div className="mt-10 space-y-10">
