@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Blog() {
@@ -10,14 +11,15 @@ export default function Blog() {
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
       <div className="my-10 space-y-5">
-        {Array.from({ length: 10 }).map((_, i) => (
+        {Array.from({ length: 2 }).map((_, i) => (
           <div
             className="flex flex-col lg:flex-row pt-5 pb-10 border-b-[1px] border-gray-500/50"
             key={i}
           >
-            <div className="flex-1">
-              <img
-                src={`https://source.unsplash.com/random/?restaurant&gravity=center&${i}`}
+            <div className="relative flex-1 aspect-video">
+              <Image
+                layout="fill"
+                src={`/images/photos/photo (${i + 1}).jpg`}
                 alt=""
                 className="object-cover w-full h-full rounded-xl aspect-video"
               />
