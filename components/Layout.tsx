@@ -82,7 +82,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </a>
             </Link>
             <div className="hidden lg:block">
-              <ul className="pb-5 pl-10 space-y-10 text-xl font-semibold first-letter:mt-5 text-theme-paragraphs">
+              <ul className="pb-5 pl-10 space-y-5 text-xl font-semibold first-letter:mt-5 text-theme-paragraphs">
                 <li className="duration-300 cursor-pointer group hover:text-theme-accent">
                   <Link href="/menu-1">
                     <a>
