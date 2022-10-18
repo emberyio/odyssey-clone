@@ -6,7 +6,7 @@ import fs from "fs";
 interface MenuItem {
   name: string;
   description: string;
-  price: number;
+  price: number | string;
 }
 interface Menu {
   title: string;
@@ -46,7 +46,7 @@ function Menu({
   items: {
     name: string;
     description: string;
-    price: number;
+    price: number | string;
   }[];
 }) {
   return (
@@ -71,8 +71,11 @@ function Menu({
               <td className="pt-5 pb-5 pr-10 text-gray-500 border-b-[1px] border-gray-500/50  border-dotted">
                 {item.description.toLowerCase()}
               </td>
-              <td className="pt-5 text-right pb-5 border-b-[1px] border-dotted border-gray-500/50  text-theme-paragraphs">
-                ${item.price}
+              <td className="pt-5 whitespace-nowrap text-right pb-5 border-b-[1px] border-dotted border-gray-500/50  text-theme-paragraphs">
+                {item.price > 0 ||
+                (typeof item.price == "string" && item.price != "")
+                  ? `$${item.price}`
+                  : ""}
               </td>
             </tr>
           ))}
