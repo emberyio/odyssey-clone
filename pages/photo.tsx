@@ -23,7 +23,6 @@ export default function Blog() {
               />
             </div>
             <div className="flex-1 pt-5 lg:pl-5 lg:pt-0">
-              <div className="text-xs text-theme-accent">MAY 23, 2022</div>
               <div className="mb-5 text-3xl font-semibold text-theme-paragraphs">
                 Can We Stop Treating Restaurants As Status Symbols?
               </div>

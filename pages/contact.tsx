@@ -16,7 +16,7 @@ export default function contact() {
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
       <div>
-        <div className="flex flex-col gap-10 my-10 lg:flex-row">
+        <div className="flex flex-col gap-10 my-10">
           <div className="flex-1">
             <div className="text-xs text-theme-accent">CALL US</div>
             <div className="text-xl text-theme-paragraphs">
@@ -30,7 +30,7 @@ export default function contact() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-10 my-10 lg:flex-row">
+        <div className="flex flex-col gap-10 my-10 ">
           <div className="flex-1">
             <div className="text-xs text-theme-accent">EMAIL US</div>
             <div className="lg:text-xl text-theme-paragraphs">
