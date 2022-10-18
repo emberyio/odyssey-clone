@@ -26,12 +26,9 @@ export default function Blog() {
             </div>
             <div className="flex-1 pt-5 lg:pl-5 lg:pt-0">
               <div className="mb-5 text-3xl font-semibold text-theme-paragraphs">
-                Can We Stop Treating Restaurants As Status Symbols?
+                Our food
               </div>
-              <div className="text-gray-500">
-                Nunc sem purus dui faucibus id amet habitant pellentesque.
-                Condimentum sed semper risus, arcu. Ornare adipiscing urna.
-              </div>
+              <div className="text-gray-500">The best in town</div>
             </div>
           </div>
         ))}
