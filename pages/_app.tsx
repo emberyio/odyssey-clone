@@ -8,7 +8,11 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Head>
-        <title>Restaurant website</title>
+        <title>Luigi&rsquo;s Italian Restaurant</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name='description' content='Lou and his wife Steph, together with all the team at Luigi&rsquo;s
+            Italian Restaurant, are committed to provide quality and friendly
+            service to locals &amp; holiday makers alike.'/>
       </Head>
       <Component {...pageProps} />
     </Layout>
