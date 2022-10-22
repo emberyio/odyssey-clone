@@ -4,12 +4,37 @@ import React from "react";
 
 
 export default function Blog() {
-  const PhotoItems = [{
-    "title": "GNOCCHI CON SALSICCIA E FUNGHI PORCINI",
+  const PhotoItems = [
+    {
+    "title": "Gnocchi Con Salsiccia E Funghi Porcini",
     "desc": "Potato gnocchi with Italian pork & fennel sausage, porcini mushrooms, white wine, rocket and shave Parmesan"
-  },
-  { "title": "ANTIPASTO DELLA CASA", 
-  "desc": "A selection of cold Italian cured meats, marinated vegetables, a selection of cheese, olives & buffalo mozzarella." }]
+    },
+    { "title": "Antipasto Della Casa", 
+    "desc": "A selection of cold Italian cured meats, marinated vegetables, a selection of cheese, olives & buffalo mozzarella." },
+    { "title": "Panna Cotta", 
+    "desc": "" },
+    { "title": "Fish Special Salmon", 
+    "desc": "" },
+    { "title": "Lemon Meringue", 
+    "desc": "" },
+    { "title": "Garlic Focaccia", 
+    "desc": "" },
+    { "title": "Chocolate Semi-Freddo", 
+    "desc": "" },
+    { "title": "Fish Special Barramundi", 
+    "desc": "" },
+    { "title": "Mixed Shellfish and Salmon Special", 
+    "desc": "" },
+    { "title": "Fish Special and Veg", 
+    "desc": "" },
+    { "title": "Insalata di Manzo", 
+    "desc": "" },
+    { "title": "Fish Special", 
+    "desc": "" },
+    { "title": "Wagyu Beef Burger", 
+    "desc": "" },
+
+  ]
 
 
   return (
@@ -29,7 +54,7 @@ export default function Blog() {
             <div className="relative flex-1 aspect-video">
               <Image
                 layout="fill"
-                src={`/images/photos/photo (${i + 1}).jpg`}
+                src={`/images/photos/photo (${i + 1}).jpeg`}
                 alt=""
                 className="object-cover w-full h-full rounded-xl aspect-video"
               />
