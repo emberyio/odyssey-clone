@@ -44,9 +44,9 @@ export default function contact() {
               Trading Hours
             </div>
             <div className="lg:text-lg text-theme-paragraphs">
-              Trading Hours Tue - Sun 11:30am - 9pm (peak season) <br />
-              Wed - Fad 5pm - 9pm (off-peak season) <br />
-              Sat - Sun / 11:30am - 9pm (off-peak season)
+              Tue - Sun 11:30am - 9pm (peak season) <br />
+              Wed - Fri 5pm - 9pm (off-peak season) <br />
+              Sat - Sun 11:30am - 9pm (off-peak season)
             </div>
           </div>
         </div>
