@@ -2,6 +2,7 @@ import { GetStaticProps } from "next";
 import React from "react";
 import { parse } from "csv-parse";
 import fs from "fs";
+import Link from "next/link";
 
 interface MenuItem {
   name: string;
