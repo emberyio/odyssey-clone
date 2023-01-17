@@ -21,7 +21,7 @@ export default function MenuPage({ menus }: { menus: Menu[] }) {
         <h1 className="flex-1 heading text-theme-accent text-[30vw] lg:text-[10vw] leading-[98%]">
           Dine In
         </h1>
-        <div className="flex-1 p-5 ">
+        <div className="flex-1 p-5 flex flex-col">
           <p className="text-gray-500 border-l-[1px] border-gray-500/50">
             Vegetarian & gluten free options available
             <br />
