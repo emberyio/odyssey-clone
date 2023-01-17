@@ -20,11 +20,18 @@ export default function MenuPage({ menus }: { menus: Menu[] }) {
         <h1 className="flex-1 heading text-theme-accent text-[30vw] lg:text-[10vw] leading-[98%]">
           Dine In
         </h1>
-        <p className="flex-1 p-5 text-gray-500 border-l-[1px] border-gray-500/50">
-          Vegetarian & gluten free options available
-          <br />
-          Please notify your waitstaff of any food intolerances or allergies.
-        </p>
+        <div className="flex-1 p-5 ">
+          <p className="text-gray-500 border-l-[1px] border-gray-500/50">
+            Vegetarian & gluten free options available
+            <br />
+            Please notify your waitstaff of any food intolerances or allergies.
+          </p>
+          <Link href="/Luigis-New-Dine-In-Menu-27922.pdf">
+            <a className="px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
+              DOWNLOAD MENU
+            </a>
+          </Link>
+        </div>
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
       <div className="mt-10 space-y-10">
