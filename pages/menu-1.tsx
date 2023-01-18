@@ -28,7 +28,7 @@ export default function MenuPage({ menus }: { menus: Menu[] }) {
             Please notify your waitstaff of any food intolerances or allergies.
           </p>
           <Link href="/Luigis-New-Dine-In-Menu-27922.pdf">
-            <a className="px-8 py-4 font-semibold duration-300 justify-center rounded-full bg-theme-accent hover:bg-white">
+            <a className="flex justify-center px-8 py-4 font-semibold duration-300 justify-center rounded-full bg-theme-accent hover:bg-white">
               DOWNLOAD MENU
             </a>
           </Link>
