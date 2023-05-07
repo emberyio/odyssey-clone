@@ -1,41 +1,34 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getPhotos } from "../api/photo";
 
+interface PhotoItem {
+  title: string;
+  desc: string;
+  file_id: string;
+}
 
+export default function Blog({}) {
+  const [photoItems, setPhotoItems] = useState<PhotoItem[]>();
 
-export default function Blog() {
-  const PhotoItems = [
-    {
-    "title": "Gnocchi Con Salsiccia E Funghi Porcini",
-    "desc": "Potato gnocchi with Italian pork & fennel sausage, porcini mushrooms, white wine, rocket and shave Parmesan"
-    },
-    { "title": "Antipasto Della Casa", 
-    "desc": "A selection of cold Italian cured meats, marinated vegetables, a selection of cheese, olives & buffalo mozzarella." },
-    { "title": "Panna Cotta", 
-    "desc": "" },
-    { "title": "Fish Special Salmon", 
-    "desc": "" },
-    { "title": "Lemon Meringue", 
-    "desc": "" },
-    { "title": "Garlic Focaccia", 
-    "desc": "" },
-    { "title": "Chocolate Semi-Freddo", 
-    "desc": "" },
-    { "title": "Fish Special Barramundi", 
-    "desc": "" },
-    { "title": "Mixed Shellfish and Salmon Special", 
-    "desc": "" },
-    { "title": "Fish Special and Veg", 
-    "desc": "" },
-    { "title": "Insalata di Manzo", 
-    "desc": "" },
-    { "title": "Fish Special", 
-    "desc": "" },
-    { "title": "Wagyu Beef Burger", 
-    "desc": "" },
+  const getPhotoItems = async () => {
+    const photoItems = await getPhotos();
+    if (!photoItems) return;
+    let currPhotoItem: PhotoItem[] = [];
+    photoItems.forEach((item) => {
+      currPhotoItem.push({
+        title: item.Title,
+        desc: item.Description,
+        file_id: item.Photo
+      })
+    })
 
-  ]
+    setPhotoItems(currPhotoItem);
+  };
 
+  useEffect(() => {
+    getPhotoItems();
+  }, []);
 
   return (
     <div className="min-h-full p-5 lg:p-10 bg-theme-dark">
@@ -46,7 +39,7 @@ export default function Blog() {
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
       <div className="my-10 space-y-5">
-        {PhotoItems.map((PhotoItem, i) => (
+        {photoItems && photoItems.map((PhotoItem, i) => (
           <div
             className="flex flex-col lg:flex-row pt-5 pb-10 border-b-[1px] border-gray-500/50"
             key={i}
@@ -54,7 +47,7 @@ export default function Blog() {
             <div className="relative flex-1 aspect-video">
               <Image
                 layout="fill"
-                src={`/images/photos/photo (${i + 1}).jpeg`}
+                src={`https://directus.embery.io/assets/${PhotoItem.file_id}`}
                 alt=""
                 className="object-cover w-full h-full rounded-xl aspect-video"
               />
