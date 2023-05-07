@@ -9,6 +9,7 @@ interface MenuItem {
 }
 interface Menu {
   title: string;
+  desc: string;
   items: MenuItem[];
 }
 
@@ -41,6 +42,7 @@ export default function MenuPage() {
       currMenus.push({
         title: menu.Name,
         items: items ? items : [],
+        desc: menu.Description,
       });
     });
     setMenus(currMenus);

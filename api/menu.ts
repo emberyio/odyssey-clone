@@ -3,6 +3,7 @@ import axios from "../api/axios_instance";
 interface MenuCategoryResponse {
   id: number;
   Name: string;
+  Description: string;
 }
 
 const getMenuCategory = async () => {
