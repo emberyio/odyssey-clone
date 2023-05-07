@@ -1,8 +1,6 @@
-import { GetStaticProps } from "next";
-import React from "react";
-import { parse } from "csv-parse";
-import fs from "fs";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { getMenuCategory, getMenuItem } from "../api/menu";
 
 interface MenuItem {
   name: string;
@@ -14,7 +12,42 @@ interface Menu {
   items: MenuItem[];
 }
 
-export default function MenuPage({ menus }: { menus: Menu[] }) {
+export default function MenuPage() {
+  const [menus, setMenus] = useState<Menu[]>([]);
+
+  const getMenu = async () => {
+    const menusCategory = await getMenuCategory();
+    const menuItems = await getMenuItem();
+    let currMenus: Menu[] = [];
+    if (!menusCategory || !menuItems) {
+      setMenus([]);
+      return;
+    }
+    menusCategory.forEach((menu) => {
+      let menuItemFiltered = menuItems.filter(
+        (item) => item.Category == menu.id
+      );
+
+      //convert menuItemFiltered into MenuItem
+      let items = menuItemFiltered.map((item) => {
+        return {
+          name: item.Name,
+          description: item.description,
+          price: item.Price,
+        };
+      });
+
+      currMenus.push({
+        title: menu.Name,
+        items: items ? items : [],
+      });
+    });
+    setMenus(currMenus);
+  };
+  useEffect(() => {
+    getMenu();
+  }, []);
+
   return (
     <div className="p-5 lg:p-10 bg-theme-dark">
       <div className="flex items-center justify-between ">
@@ -28,7 +61,7 @@ export default function MenuPage({ menus }: { menus: Menu[] }) {
             Please notify your waitstaff of any food intolerances or allergies.
           </p>
           <Link href="/Luigis-New-Dine-In-Menu-27922.pdf">
-            <a className="flex justify-center px-8 py-4 font-semibold duration-300 justify-center rounded-full bg-theme-accent hover:bg-white">
+            <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
               DOWNLOAD MENU
             </a>
           </Link>
@@ -92,31 +125,3 @@ function Menu({
     </div>
   );
 }
-
-export const getStaticProps: GetStaticProps = async (context) => {
-  const files = fs.readdirSync("./data/dinein");
-  const menus: Menu[] = await Promise.all(
-    files.map(async (file) => {
-      const data = fs.readFileSync(`./data/dinein/${file}`, "utf8");
-      const records = await new Promise((resolve, reject) => {
-        parse(data, { columns: true }, (err, records) => {
-          if (err) reject(err);
-          resolve(records);
-        });
-      });
-      const titleRaw = file.replace(".csv", "").split("_");
-      titleRaw.shift();
-      const title = titleRaw.join(" ");
-
-      return {
-        title,
-        items: records as MenuItem[],
-      };
-    })
-  );
-  return {
-    props: {
-      menus,
-    },
-  };
-};
