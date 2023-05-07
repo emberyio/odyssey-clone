@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getMenuCategory, getMenuItem } from "../api/menu";
+import { getFileMenu, getMenuCategory, getMenuItem } from "../api/menu";
 
 interface MenuItem {
   name: string;
@@ -14,6 +14,7 @@ interface Menu {
 
 export default function MenuPage() {
   const [menus, setMenus] = useState<Menu[]>([]);
+  const [menuFiles, setMenuFiles] = useState<string>('');
 
   const getMenu = async () => {
     const menusCategory = await getMenuCategory();
@@ -44,8 +45,17 @@ export default function MenuPage() {
     });
     setMenus(currMenus);
   };
+
+  const getMenuFile = async () => {
+      const res = await getFileMenu();
+      if (!res) 
+      return;
+      setMenuFiles(res[0].Menu);
+  }
+
   useEffect(() => {
     getMenu();
+    getMenuFile();
   }, []);
 
   return (
@@ -60,7 +70,7 @@ export default function MenuPage() {
             <br />
             Please notify your waitstaff of any food intolerances or allergies.
           </p>
-          <Link href="/Luigis-New-Dine-In-Menu-27922.pdf">
+          <Link href={`https://directus.embery.io/assets/${menuFiles}`}>
             <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
               DOWNLOAD MENU
             </a>
