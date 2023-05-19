@@ -72,7 +72,7 @@ export default function MenuPage() {
             <br />
             Please notify your waitstaff of any food intolerances or allergies.
           </p>
-          <Link href={`https://directus.embery.io/assets/${menuFiles}`}>
+          <Link href={`https://dashboard.embery.com.au/assets/${menuFiles}`}>
             <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
               DOWNLOAD MENU
             </a>
