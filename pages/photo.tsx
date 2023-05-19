@@ -47,7 +47,7 @@ export default function Blog({}) {
             <div className="relative flex-1 aspect-video">
               <Image
                 layout="fill"
-                src={`https://directus.embery.io/assets/${PhotoItem.file_id}`}
+                src={`https://dashboard.embery.com.au/assets/${PhotoItem.file_id}`}
                 alt=""
                 className="object-cover w-full h-full rounded-xl aspect-video"
               />
