@@ -78,7 +78,7 @@ export default function MenuPage() {
             </a>
           </Link>
           <Link href={`/images/itamenu.png`}>
-            <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full border-theme-accent text-theme-accent hover:bg-white">
+            <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full border-theme-accent border text-theme-accent hover:bg-white">
               DOWNLOAD MENU
             </a>
           </Link>
