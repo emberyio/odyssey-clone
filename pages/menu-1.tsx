@@ -79,7 +79,7 @@ export default function MenuPage() {
           </Link>
           <Link href={`/images/itamenu.png`}>
             <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full border-theme-accent border text-theme-accent hover:bg-white">
-              DOWNLOAD MENU
+              ITALIAN NIGHT MENU
             </a>
           </Link>
         </div>
