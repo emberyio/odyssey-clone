@@ -74,6 +74,11 @@ export default function MenuPage() {
           </p>
           <Link href={`https://dashboard.embery.com.au/assets/${menuFiles}`}>
             <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
+              DINE IN MENU
+            </a>
+          </Link>
+          <Link href={`/images/itamenu.png`}>
+            <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full border-theme-accent text-theme-accent hover:bg-white">
               DOWNLOAD MENU
             </a>
           </Link>
