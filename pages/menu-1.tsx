@@ -78,14 +78,14 @@ export default function MenuPage() {
             <br />
             Please notify your waitstaff of any food intolerances or allergies.
           </p>
-          <Link href={`https://dashboard.embery.com.au/assets/${MenuFiles[0].file}`}>
+          <Link href={`https://dashboard.embery.com.au/assets/${MenuFiles[0]?.file}`}>
             <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
-              {MenuFiles[0].name}
+              {MenuFiles[0]?.name}
             </a>
           </Link>
-          <Link href={`https://dashboard.embery.com.au/assets/${MenuFiles[1].file}`}>
+          <Link href={`https://dashboard.embery.com.au/assets/${MenuFiles[1]?.file}`}>
             <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full border-theme-accent border text-theme-accent hover:bg-white">
-            {MenuFiles[1].name}
+            {MenuFiles[1]?.name}
             </a>
           </Link>
         </div>
