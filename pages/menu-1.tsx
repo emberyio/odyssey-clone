@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getFileMenu, getMenuCategory, getMenuItem } from "../api/menu";
+import { getExtraMenu, getMenuCategory, getMenuItem } from "../api/menu";
 
 interface MenuItem {
   name: string;
@@ -48,16 +48,17 @@ export default function MenuPage() {
     setMenus(currMenus);
   };
 
-  const getMenuFile = async () => {
-      const res = await getFileMenu();
+  const getExtraMenuItem = async () => {
+      const res = await getExtraMenu();
       if (!res) 
       return;
+      console.log(res[0]);
       setMenuFiles(res[0].Menu);
   }
 
   useEffect(() => {
     getMenu();
-    getMenuFile();
+    getExtraMenuItem();
   }, []);
 
   return (
