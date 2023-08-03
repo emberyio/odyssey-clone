@@ -56,9 +56,9 @@ export default function MenuPage() {
       const res = await getMenuFiles();
       if (!res) 
       return;
-      
+      // console.log(res);
+
       setMenuFiles(res);
-      console.log(MenuFiles);
   }
 
   useEffect(() => {
@@ -78,7 +78,7 @@ export default function MenuPage() {
             <br />
             Please notify your waitstaff of any food intolerances or allergies.
           </p>
-          {/* <Link href={`https://dashboard.embery.com.au/assets/${MenuFiles[0].file}`}>
+          <Link href={`https://dashboard.embery.com.au/assets/${MenuFiles[0].file}`}>
             <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
               {MenuFiles[0].name}
             </a>
@@ -87,7 +87,7 @@ export default function MenuPage() {
             <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full border-theme-accent border text-theme-accent hover:bg-white">
             {MenuFiles[1].name}
             </a>
-          </Link> */}
+          </Link>
         </div>
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
