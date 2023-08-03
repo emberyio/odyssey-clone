@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { getExtraMenu, getMenuCategory, getMenuItem } from "../api/menu";
+import { getMenuFiles, getMenuCategory, getMenuItem } from "../api/menu";
 
 interface MenuItem {
   name: string;
@@ -12,10 +12,14 @@ interface Menu {
   desc: string;
   items: MenuItem[];
 }
-
+interface MenuFileResponse {
+  id: number;
+  name: string;
+  file: string;
+}
 export default function MenuPage() {
   const [menus, setMenus] = useState<Menu[]>([]);
-  const [menuFiles, setMenuFiles] = useState<string>('');
+  const [MenuFiles, setMenuFiles] = useState<MenuFileResponse[]>([]);
 
   const getMenu = async () => {
     const menusCategory = await getMenuCategory();
@@ -48,17 +52,18 @@ export default function MenuPage() {
     setMenus(currMenus);
   };
 
-  const getExtraMenuItem = async () => {
-      const res = await getExtraMenu();
+  const getMenuFilesAsync = async () => {
+      const res = await getMenuFiles();
       if (!res) 
       return;
-      console.log(res[0]);
-      setMenuFiles(res[0].Menu);
+      
+      setMenuFiles(res);
+      console.log(MenuFiles);
   }
 
   useEffect(() => {
     getMenu();
-    getExtraMenuItem();
+    getMenuFilesAsync();
   }, []);
 
   return (
@@ -73,16 +78,16 @@ export default function MenuPage() {
             <br />
             Please notify your waitstaff of any food intolerances or allergies.
           </p>
-          <Link href={`https://dashboard.embery.com.au/assets/${menuFiles}`}>
+          {/* <Link href={`https://dashboard.embery.com.au/assets/${MenuFiles[0].file}`}>
             <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full bg-theme-accent hover:bg-white">
-              DINE IN MENU
+              {MenuFiles[0].name}
             </a>
           </Link>
-          <Link href={`/images/itamenu.png`}>
+          <Link href={`https://dashboard.embery.com.au/assets/${MenuFiles[1].file}`}>
             <a className="flex justify-center px-8 py-4 font-semibold duration-300 rounded-full border-theme-accent border text-theme-accent hover:bg-white">
-              ITALIAN NIGHT MENU
+            {MenuFiles[1].name}
             </a>
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>

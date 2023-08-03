@@ -44,14 +44,15 @@ const getMenuItem = async () => {
   }
 };
 
-interface ExtraMenuResponse {
+interface MenuFileResponse {
   id: number;
-  Menu: string;
+  name: string;
+  file: string;
 }
 
-const getExtraMenu = async () => {
+const getMenuFiles = async () => {
   try {
-    const res = await axios.get<{data: ExtraMenuResponse[]}>("/items/Extra_Menu");
+    const res = await axios.get<{data: MenuFileResponse[]}>("/items/MenuFiles");
 
     if (res.status !== 200) {
       console.log("error occured when login");
@@ -64,4 +65,4 @@ const getExtraMenu = async () => {
   }
 }
 
-export { getMenuCategory, getMenuItem, getExtraMenu };
+export { getMenuCategory, getMenuItem, getMenuFiles };
