@@ -67,7 +67,7 @@ export default function MenuPage() {
   }, []);
 
   return (
-    <div className="p-5 lg:p-10 bg-theme-dark">
+    <div className=" p-5 h-full lg:p-10 items-center bg-theme-dark">
       <div className="flex items-center justify-between ">
         <h1 className="flex-1 heading text-theme-accent text-[30vw] lg:text-[10vw] leading-[98%]">
           Dine In
@@ -90,12 +90,12 @@ export default function MenuPage() {
           </Link>
         </div>
       </div>
-      <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div>
-      <div className="mt-10 space-y-10">
+      {/* <div className="w-full h-1 border-t-[1px] border-b-[1px] border-gray-500/50 mt-8"></div> */}
+      {/* <div className="mt-10 space-y-10">
         {menus.map((menu) => (
           <Menu key={menu.title} {...menu} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -136,8 +136,8 @@ function Menu({
                 {item.description.toLowerCase()}
               </td>
               <td className="pt-5 whitespace-nowrap text-right pb-5 border-b-[1px] border-dotted border-gray-500/50  text-theme-paragraphs">
-                {item.price > 0 ||
-                (typeof item.price == "string" && item.price != "")
+                {(typeof item.price === "number" && item.price > 0) ||
+                (typeof item.price === "string" && item.price !== "")
                   ? `$${item.price}`
                   : ""}
               </td>
