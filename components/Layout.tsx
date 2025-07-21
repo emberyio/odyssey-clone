@@ -204,7 +204,7 @@ function Nav({ onMenuClick }: { onMenuClick: () => void }) {
     <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-theme-dark ">
       <ul className="space-y-10 text-3xl font-semibold first-letter:mt-5 text-theme-paragraphs">
         <li>
-          <Link href="/menu-1">
+                  <Link href="https://dashboard.embery.com.au/assets/f4a55e4b-0a4a-4094-859e-a96c69c6ea55">
             <a>
               <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
               Dine-In Menu
@@ -251,6 +251,18 @@ function Nav({ onMenuClick }: { onMenuClick: () => void }) {
             </a>
           </Link>
         </li>
+        <li className="flex items-center gap-4 mt-4">
+  <a href="https://www.instagram.com/luigis_italian_restaurant" target="_blank" rel="noopener noreferrer" className="hover:text-theme-accent">
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 fill-current" viewBox="0 0 24 24">
+      <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3V7a3 3 0 013-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-2a1.5 1.5 0 100 3 1.5 1.5 0 000-3z" />
+    </svg>
+  </a>
+  <a href="https://www.facebook.com/luigis.torquay" target="_blank" rel="noopener noreferrer" className="hover:text-theme-accent">
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-10 h-10 fill-current" viewBox="0 0 24 24">
+      <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878V15.47H7.898v-3.47h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.261c-1.243 0-1.63.772-1.63 1.562v1.88h2.773l-.443 3.47h-2.33v6.407C18.343 21.128 22 16.991 22 12z" />
+    </svg>
+  </a>
+</li>
       </ul>
     </div>
   );
