@@ -8,17 +8,36 @@ import { Autoplay, EffectCreative } from "swiper";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import logo from "../public/Luigis-Logo-Final1500-1500-px_adobe_express.svg";
+
+import { getMenuFiles, getMenuCategory, getMenuItem } from "../api/menu";
+interface MenuFileResponse {
+  id: number;
+  name: string;
+  file: string;
+}
 const NUM_IMAGES = 8;
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isOpenNav, setIsOpenNav] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
+  const [MenuFiles, setMenuFiles] = useState<MenuFileResponse[]>([]);
 
   useEffect(() => {
     setIsOpenNav(false);
     setIsMenuOpen(false);
   }, [router]);
+
+  const getMenuFilesAsync = async () => {
+      const res = await getMenuFiles();
+      if (!res) 
+      return;
+      setMenuFiles(res);
+  }
+
+  useEffect(() => {
+    getMenuFilesAsync();
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen lg:flex-row bg-theme-dark">
@@ -85,7 +104,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <ul className="pb-5 pl-10 space-y-5 text-xl font-semibold first-letter:mt-5 text-theme-paragraphs">
                 <li className="duration-300 cursor-pointer group hover:text-theme-accent">
                   {/* <Link href="/menu-1"> */}
-                  <Link href="https://dashboard.embery.com.au/assets/f4a55e4b-0a4a-4094-859e-a96c69c6ea55">
+                  <Link href={`https://dashboard.embery.com.au/assets/${MenuFiles[0]?.file}`}>
                     <a>
                       <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
                       Dine-In Menu
