@@ -33,7 +33,7 @@ export default function Blog({}) {
   return (
     <div className="min-h-full p-5 lg:p-10 bg-theme-dark">
       <div className="flex justify-between ">
-        <h1 className="pr-5 text-6xl text-theme-accent heading">
+        <h1 className="pr-5 text-[10vw] text-theme-accent heading leading-[98%]">
           PHOTO AND EVENTS
         </h1>
       </div>

@@ -17,13 +17,13 @@ interface Menu {
 export default function MenuPage({ menus }: { menus: Menu[] }) {
   return (
     <div className="p-5 lg:p-10 bg-theme-dark">
-      <div className="flex items-center justify-between ">
-        <div className="flex-1 ">
-          <h1 className="heading text-theme-accent text-[20vw] lg:text-[10vw] leading-[98%]">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+        <div>
+          <h1 className="heading text-theme-accent text-[10vw] leading-[98%]">
             TAKEAWAY
           </h1>
         </div>
-        <div className="border-l-[1px] p-5 flex-1 border-gray-500/50">
+        <div className="border-t-[1px] lg:border-t-0 lg:border-l-[1px] p-5 lg:flex-1 border-gray-500/50">
           <p className="text-gray-500 ">
             VEGETARIAN & GLUTEN FREE OPTION AVAILABLE. PLEASE NOTIFY US OF ANY
             FOOD INTOLERANCES OR ALLERGIES

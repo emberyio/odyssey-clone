@@ -4,11 +4,11 @@ import React from "react";
 export default function bookatable() {
   return (
     <div className="min-h-full p-5 lg:p-10 bg-theme-dark">
-      <div className="flex items-center justify-between">
-        <h1 className=" heading text-theme-accent text-[10vw] pr-5 leading-[98%]">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+        <h1 className=" heading text-theme-accent text-[10vw] leading-[98%]">
           RESERVATION
         </h1>
-        <p className=" p-5 text-gray-500 border-l-[1px] border-gray-500/50">
+        <p className=" p-5 text-gray-500 border-t-[1px] lg:border-t-0 lg:border-l-[1px] border-gray-500/50">
           WHILE WE ENDEVOUR TO GIVE CUSTOMERS THEIR PREFFED SEATING. <br />{" "}
           REQUESTS DURING BUSY PERIODS CAN NOT ALWAYS BE FULLFILED. <br />{" "}
           PARTICULARLY FOR OUTDOOR SEATING DURING WARM WEATHER

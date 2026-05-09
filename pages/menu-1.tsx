@@ -68,11 +68,11 @@ export default function MenuPage() {
 
   return (
     <div className=" p-5 h-full lg:p-10 items-center bg-theme-dark">
-      <div className="flex items-center justify-between ">
-        <h1 className="flex-1 heading text-theme-accent text-[30vw] lg:text-[10vw] leading-[98%]">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+        <h1 className="heading text-theme-accent text-[10vw] leading-[98%]">
           Dine In
         </h1>
-        <div className="flex-1 p-5 flex flex-col gap-10 border-l-[1px] border-gray-500/50">
+        <div className="lg:flex-1 p-5 flex flex-col gap-10 border-t-[1px] lg:border-t-0 lg:border-l-[1px] border-gray-500/50">
           <p className="text-gray-500 ">
             Vegetarian & gluten free options available
             <br />
