@@ -83,7 +83,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             }}
             className="z-[90] lg:hidden"
           >
-            <Nav onMenuClick={() => setIsMenuOpen(true)} />
+            <Nav onMenuClick={() => setIsMenuOpen(true)} menuFile={MenuFiles[0]?.file} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -218,12 +218,12 @@ function MenuView({ onClose }: { onClose: () => void }) {
   );
 }
 
-function Nav({ onMenuClick }: { onMenuClick: () => void }) {
+function Nav({ onMenuClick, menuFile }: { onMenuClick: () => void; menuFile?: string }) {
   return (
     <div className="fixed top-0 left-0 z-50 flex items-center justify-center w-full h-full bg-theme-dark ">
       <ul className="space-y-10 text-3xl font-semibold first-letter:mt-5 text-theme-paragraphs">
         <li className="duration-300 cursor-pointer group hover:text-theme-accent">
-          <Link href="/menu-1">
+          <Link href={menuFile ? `https://dashboard.embery.com.au/assets/${menuFile}` : "/menu-1"}>
             <a>
               <span className="group-hover:h-2.5 group-hover:w-2.5  duration-300 w-1.5 mr-1 h-1.5 rounded-full bg-theme-accent inline-block"></span>{" "}
               Dine-In Menu
